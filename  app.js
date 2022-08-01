@@ -9,11 +9,18 @@ if(age <= 0){
 
 
 var gender =prompt("enter your gender");
-genderInter();
-function genderInter (){
-if( gender != "male" || gender != "female" ) {
-    alert("error it must be male or female");
-}
+
+switch (gender)
+{
+    case "male" :
+        alert("your gender is male");
+        break;
+        case 'female' :
+        alert("your gender is female");
+        break;
+        default :
+        alert("you mast inter male or female");
+        break;
 }
 confirm("are you sure you want to skip");
 
