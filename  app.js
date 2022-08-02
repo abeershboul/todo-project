@@ -40,7 +40,7 @@ prompt("enter your gender");}
 
 
  var con = confirm("are you sure you want to skip");
-if ( con == 0){
+if ( con == true){
     switch (gender){
 case "male" :
     alert("wellcome Mr."+name);
