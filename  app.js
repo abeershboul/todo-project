@@ -14,32 +14,35 @@ function addAge()
 var age = prompt("inter your age");
 if(age == undefined)
 {age= "invald";}
-array.push(age);
+
+while(1){
 if(age <= 0){
     alert(" the age is less than 0");
+    continue;}
+    else { 
+        break;
+
+    }
 }
+array.push(age);
 }
+
 function addGender(){
 var gender =prompt("enter your gender");
-if(gender == undefined)
-{gender= "invald";}
+ do{
+    if(gender !== "male" && gender !== "female")
+    {alert("you have to select between male or female");
+prompt("enter your gender");}
+
+ }while(false)
+
+
+
 array.push(gender);
-switch (gender)
-{
-    case "male" :
-        alert("your gender is male");
-        break;
-        case 'female' :
-        alert("your gender is female");
-        break;
-        default :
-        alert("you mast inter male or female");
-        break;
-}
 }
 function conf(){
-confirm("are you sure you want to skip");
-
+ var con = confirm("are you sure you want to skip");
+if ( con == 1){
 if( gender !== "male" && gender !=="female"){
     alert("wellcom");
     alert(name);
@@ -52,11 +55,13 @@ if(gender ==="female"){
     alert("wellcome Ms.");
     alert(name);
 }
-}
+}}
 addName();
 addAge();
 addGender();
+conf();
 anserQustion();
+
 function anserQustion (){
     
 var benefit = prompt("are you find this page is useful");
