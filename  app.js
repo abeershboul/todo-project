@@ -1,73 +1,76 @@
 //alert("enter your name");
 
 var array =[] ;
-function addName(){
+function info(){
 
 var name =prompt("enter your name");
 if(name == undefined)
 {name= "invald";}
-array.push(name);
-}
-function addAge()
-{
 
-var age = prompt("inter your age");
-if(age == undefined)
-{age= "invald";}
-array.push(age);
+
+
+
+
+
+while(1){
+    var age = prompt("inter your age");
 if(age <= 0){
     alert(" the age is less than 0");
-}
-}
-function addGender(){
-var gender =prompt("enter your gender");
-if(gender == undefined)
-{gender= "invald";}
-array.push(gender);
-switch (gender)
-{
-    case "male" :
-        alert("your gender is male");
+    continue;}
+    else { 
         break;
-        case 'female' :
-        alert("your gender is female");
-        break;
-        default :
-        alert("you mast inter male or female");
-        break;
-}
-}
-function conf(){
-confirm("are you sure you want to skip");
 
-if( gender !== "male" && gender !=="female"){
-    alert("wellcom");
-    alert(name);
+    }
 }
-if(gender === "male"){
-    alert("wellcom Mr.");
-    alert( name);
+
+
+
+
+var gender =prompt("enter your gender");
+ do{
+    if(gender !== "male" && gender !== "female")
+    {alert("you have to select between male or female");
+prompt("enter your gender");}
+
+ }while(false)
+
+
+
+
+
+
+ var con = confirm("are you sure you want to skip");
+if ( con == 0){
+    switch (gender){
+case "male" :
+    alert("wellcome Mr."+name);
+    break;
+    case "female" :
+        alert("wellcome Ms."
+        +name);
+        break;
+        default:
+            alert("wellcome"+name);
+break;
+
+}}
 }
-if(gender ==="female"){
-    alert("wellcome Ms.");
-    alert(name);
-}
-}
-addName();
-addAge();
-addGender();
+ info();
+
 anserQustion();
+
 function anserQustion (){
     
 var benefit = prompt("are you find this page is useful");
-if(benefit == undefined)
-    benefit = "invald";
+if(benefit == undefined){
+    benefit = "invald";}
 
 
 
 var desgin = prompt("Are you find the style of this page is nice" );
 if(desgin == undefined)
 { desgin = "invald";}
+
 
 var student = prompt("are you studant");
 if(student  == undefined){
